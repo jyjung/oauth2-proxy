@@ -128,6 +128,9 @@ const (
 
 	// OIDCProvider is the provider type for OIDC
 	OIDCProvider ProviderType = "oidc"
+
+	// Security365 Provider
+	Security365Provider ProviderType = "security365"
 )
 
 type KeycloakOptions struct {
@@ -237,6 +240,11 @@ type LoginGovOptions struct {
 	JWTKeyFile string `json:"jwtKeyFile,omitempty"`
 	// PubJWKURL is the JWK pubkey access endpoint
 	PubJWKURL string `json:"pubjwkURL,omitempty"`
+}
+
+type Security365Options struct {
+	ClientName string `json:"clientName,omitempty"`
+	Extra      string `json:"extra,omitempty"`
 }
 
 func providerDefaults() Providers {

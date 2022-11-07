@@ -833,29 +833,33 @@ func (p *OAuthProxy) OAuthCallback(rw http.ResponseWriter, req *http.Request) {
 	}
 
 	csrf.ClearCookie(rw, req)
+	nonce := ""
+	appRedirect := "/"
+	providerName := p.provider.Data().ProviderName
+	if supportStateParam(providerName) {
+		nonce, appRedirect, err = decodeState(req)
+		if err != nil {
+			logger.Errorf("Error while parsing OAuth2 state: %v", err)
+			p.ErrorPage(rw, req, http.StatusInternalServerError, err.Error())
+			return
+		}
 
-	nonce, appRedirect, err := decodeState(req)
-	if err != nil {
-		logger.Errorf("Error while parsing OAuth2 state: %v", err)
-		p.ErrorPage(rw, req, http.StatusInternalServerError, err.Error())
-		return
-	}
+		if !csrf.CheckOAuthState(nonce) {
+			logger.PrintAuthf(session.Email, req, logger.AuthFailure, "Invalid authentication via OAuth2: CSRF token mismatch, potential attack")
+			p.ErrorPage(rw, req, http.StatusForbidden, "CSRF token mismatch, potential attack", "Login Failed: Unable to find a valid CSRF token. Please try again.")
+			return
+		}
 
-	if !csrf.CheckOAuthState(nonce) {
-		logger.PrintAuthf(session.Email, req, logger.AuthFailure, "Invalid authentication via OAuth2: CSRF token mismatch, potential attack")
-		p.ErrorPage(rw, req, http.StatusForbidden, "CSRF token mismatch, potential attack", "Login Failed: Unable to find a valid CSRF token. Please try again.")
-		return
-	}
+		csrf.SetSessionNonce(session)
+		if !p.provider.ValidateSession(req.Context(), session) {
+			logger.PrintAuthf(session.Email, req, logger.AuthFailure, "Session validation failed: %s", session)
+			p.ErrorPage(rw, req, http.StatusForbidden, "Session validation failed")
+			return
+		}
 
-	csrf.SetSessionNonce(session)
-	if !p.provider.ValidateSession(req.Context(), session) {
-		logger.PrintAuthf(session.Email, req, logger.AuthFailure, "Session validation failed: %s", session)
-		p.ErrorPage(rw, req, http.StatusForbidden, "Session validation failed")
-		return
-	}
-
-	if !p.redirectValidator.IsValidRedirect(appRedirect) {
-		appRedirect = "/"
+		if !p.redirectValidator.IsValidRedirect(appRedirect) {
+			appRedirect = "/"
+		}
 	}
 
 	// set cookie, or deny
@@ -1171,6 +1175,16 @@ func checkAllowedEmails(req *http.Request, s *sessionsapi.SessionState) bool {
 // original application redirect
 func encodeState(nonce string, redirect string) string {
 	return fmt.Sprintf("%v:%v", nonce, redirect)
+}
+
+// decodeState parses the OAuth state param into our nonce  but Security365 not support this
+func supportStateParam(provider string) bool {
+	switch provider {
+	case "Security365":
+		return false
+	default:
+		return true
+	}
 }
 
 // decodeState splits the reflected OAuth state response back into

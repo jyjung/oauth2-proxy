@@ -3,17 +3,19 @@ package providers
 import (
 	"bytes"
 	"context"
+	"encoding/base64"
+	"errors"
 	"net/url"
 	"time"
 
-	"github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/options"
 	"github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions"
 	"github.com/oauth2-proxy/oauth2-proxy/v7/pkg/requests"
 )
 
-// Security365Provider represents an Nextcloud based Identity Provider
+// Security365Provider represents  Identity Provider
 type Security365Provider struct {
 	*ProviderData
+	RedirectURI string
 }
 
 var _ Provider = (*Security365Provider)(nil)
@@ -23,35 +25,38 @@ const Security365ProviderName = "Security365"
 // NewSecurity365Provider initiates a new Security365Provider
 func NewSecurity365Provider(p *ProviderData) *Security365Provider {
 	p.ProviderName = Security365ProviderName
-	p.getAuthorizationHeaderFunc = makeOIDCHeader
-	if p.EmailClaim == options.OIDCEmailClaim {
-		// This implies the email claim has not been overridden, we should set a default
-		// for this provider
-		p.EmailClaim = "ocs.data.email"
-	}
+	// p.getAuthorizationHeaderFunc = makeOIDCHeader
 	return &Security365Provider{ProviderData: p}
 }
 
+// GetLoginURL overrides GetLoginURL to add the access_type and approval_prompt parameters
 func (p *Security365Provider) GetLoginURL(redirectURI, state, nonce string, extraParams url.Values) string {
-	// loginURL := makeLoginURL(p.Data(), redirectURI, state, extraParams)
-	// return loginURL.String()
-	return "https://devlogin.softcamp.co.kr/SCCloudOAuthService/authLogin?clientName=jyjungAuth2"
+	p.RedirectURI = redirectURI
+	return p.Data().LoginURL.String()
+}
+
+func (p *Security365Provider) makeBasicBase64Encoded() string {
+	base64Encoded := base64.StdEncoding.EncodeToString([]byte(p.Data().ClientID + ":" + p.Data().ClientSecret))
+	return "Basic " + base64Encoded
 }
 
 func (p *Security365Provider) Redeem(ctx context.Context, _, code, codeVerifier string) (*sessions.SessionState, error) {
 	if code == "" {
 		return nil, ErrMissingCode
 	}
-	// redeemURL := p.RedeemURL.String()
-	authInfo := "Basic ZTc3YWZmZmItZGYxNC00ZTBlLWIxOWQtNjlhNmJjN2MyYzUxOkp5a2hJeXdyS1NJdEtpWXBJU01pSWlRckppb3BKaUlrSWlvcUppb21JaXc="
-	redeemURL := "https://devlogin.softcamp.co.kr/SCCloudOAuthService/common/oauth/token"
+
+	providerData := p.Data()
+	if providerData.ClientSecret == "" {
+		return nil, errors.New("missing client secret")
+	}
+	authInfo := p.makeBasicBase64Encoded()
+	redeemURL := p.Data().RedeemURL.String()
+
 	params := url.Values{}
-	params.Add("extra", "3CJ55MSE-xLO7Sxt4-qUBKzbcs-XP2cgGEq")
-	params.Add("redirect_uri", "http://localhost:8080/oauth2/callback")
+	params.Add("extra", p.Data().Extra)
+	params.Add("redirect_uri", p.RedirectURI)
 	params.Add("code", code)
 	params.Add("grant_type", "authorization_code")
-	// Get the token from the body that we got from the token endpoint.
-
 	var jsonResponse struct {
 		AccessToken  string `json:"access_token"`
 		TokenType    string `json:"token_type"`
@@ -60,7 +65,6 @@ func (p *Security365Provider) Redeem(ctx context.Context, _, code, codeVerifier 
 		Scope        string `json:"scope"`
 		Jwt          string `json:"jwt"`
 	}
-	// err := requests.New(p.RedeemURL.String()).
 	err := requests.New(redeemURL).
 		WithContext(ctx).
 		WithMethod("POST").
@@ -89,7 +93,7 @@ func (p *Security365Provider) Validator(mail string) bool {
 	return true
 }
 
-// EnrichSession finds additional policy and license information
+// EnrichSession finds additional policy and license , ztca information
 func (p *Security365Provider) EnrichSession(ctx context.Context, s *sessions.SessionState) error {
 	// profileURL := p.ValidateURL.String()
 	// if p.ProfileURL.String() != "" {

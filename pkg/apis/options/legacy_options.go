@@ -482,6 +482,7 @@ type LegacyProvider struct {
 	ClientSecretFile string `flag:"client-secret-file" cfg:"client_secret_file"`
 
 	KeycloakGroups           []string `flag:"keycloak-group" cfg:"keycloak_groups"`
+	Extra                    string   `flag:"extra" cfg:"extra"`
 	AzureTenant              string   `flag:"azure-tenant" cfg:"azure_tenant"`
 	AzureGraphGroupField     string   `flag:"azure-graph-group-field" cfg:"azure_graph_group_field"`
 	BitbucketTeam            string   `flag:"bitbucket-team" cfg:"bitbucket_team"`
@@ -538,6 +539,7 @@ func legacyProviderFlagSet() *pflag.FlagSet {
 	flagSet := pflag.NewFlagSet("provider", pflag.ExitOnError)
 
 	flagSet.StringSlice("keycloak-group", []string{}, "restrict logins to members of these groups (may be given multiple times)")
+	flagSet.String("extra", "", "extra parameter info about Security365 tenant")
 	flagSet.String("azure-tenant", "common", "go to a tenant-specific or common (tenant-independent) endpoint.")
 	flagSet.String("azure-graph-group-field", "", "configures the group field to be used when building the groups list(`id` or `displayName`. Default is `id`) from Microsoft Graph(available only for v2.0 oidc url). Based on this value, the `allowed-group` config values should be adjusted accordingly. If using `id` as group field, `allowed-group` should contains groups IDs, if using `displayName` as group field, `allowed-group` should contains groups name")
 	flagSet.String("bitbucket-team", "", "restrict logins to members of this team")
@@ -653,6 +655,7 @@ func (l *LegacyProvider) convert() (Providers, error) {
 		Scope:               l.Scope,
 		AllowedGroups:       l.AllowedGroups,
 		CodeChallengeMethod: l.CodeChallengeMethod,
+		Extra:               l.Extra,
 	}
 
 	// This part is out of the switch section for all providers that support OIDC

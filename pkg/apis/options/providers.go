@@ -78,6 +78,8 @@ type Provider struct {
 	AllowedGroups []string `json:"allowedGroups,omitempty"`
 	// The code challenge method
 	CodeChallengeMethod string `json:"code_challenge_method,omitempty"`
+	// Extra parameters for Security365
+	Extra string `json:"extra,omitempty"`
 }
 
 // ProviderType is used to enumerate the different provider type options

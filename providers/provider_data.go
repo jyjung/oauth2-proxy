@@ -41,6 +41,7 @@ type ProviderData struct {
 	CodeChallengeMethod string
 	// Code challenge methods supported by the Provider
 	SupportedCodeChallengeMethods []string `json:"code_challenge_methods_supported,omitempty"`
+	Extra                         string
 
 	// Common OIDC options for any OIDC-based providers to consume
 	AllowUnverifiedEmail bool

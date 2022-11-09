@@ -80,6 +80,10 @@ func newProviderDataFromConfig(providerConfig options.Provider) (*ProviderData, 
 		ClientSecretFile: providerConfig.ClientSecretFile,
 	}
 
+	if providerConfig.Extra != "" {
+		p.Extra = providerConfig.Extra
+	}
+
 	needsVerifier, err := providerRequiresOIDCProviderVerifier(providerConfig.Type)
 	if err != nil {
 		return nil, err

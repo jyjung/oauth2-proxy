@@ -949,6 +949,9 @@ func (p *OAuthProxy) Proxy(rw http.ResponseWriter, req *http.Request) {
 	switch err {
 	case nil:
 		// we are authenticated
+		// TODO: Rule 체크를 해서 접속할수 있는 권한이 있는지 확인한다.
+		// 해당 이메일에 아무런 설정이 없는 경우 그냥 접속하게 한다.
+		// Security365에서만 동작하고 다른 사이트는 영향이 없게 해야한다.
 		p.addHeadersForProxying(rw, session)
 		p.headersChain.Then(p.upstreamProxy).ServeHTTP(rw, req)
 	case ErrNeedsLogin:

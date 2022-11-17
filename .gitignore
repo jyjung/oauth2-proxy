@@ -43,5 +43,5 @@ _testmain.go
 Dockerfile.dev
 
 # for private use
-security365_test.go
+security365_test*.go
 bin/

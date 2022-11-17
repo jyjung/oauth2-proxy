@@ -28,6 +28,8 @@ type SessionState struct {
 	User              string   `msgpack:"u,omitempty"`
 	Groups            []string `msgpack:"g,omitempty"`
 	PreferredUsername string   `msgpack:"pu,omitempty"`
+	AllowPolicy       string   `msgpack:"ap,omitempty"`
+	DenyPolicy        string   `msgpack:"dp,omitempty"`
 
 	// Internal helpers, not serialized
 	Clock clock.Clock `msgpack:"-"`

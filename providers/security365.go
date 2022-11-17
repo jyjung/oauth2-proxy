@@ -20,6 +20,7 @@ import (
 type Security365Provider struct {
 	*ProviderData
 	RedirectURI string
+	TokenURL    string
 	RsaPubKey   *rsa.PublicKey
 }
 
@@ -30,7 +31,15 @@ const Security365ProviderName = "Security365"
 // NewSecurity365Provider initiates a new Security365Provider
 func NewSecurity365Provider(p *ProviderData) *Security365Provider {
 	p.ProviderName = Security365ProviderName
-	return &Security365Provider{ProviderData: p}
+
+	// Remove parameters that are not used by Security365
+	// "--redeem-url",
+	// "https://devlogin.softcamp.co.kr/SCCloudOAuthService/common/oauth/token",
+	tokenUrl := p.LoginURL.Scheme + "://" + p.LoginURL.Host + "/SCCloudOAuthService/common/oauth/token"
+	return &Security365Provider{
+		ProviderData: p,
+		TokenURL:     tokenUrl,
+	}
 }
 
 // GetLoginURL overrides GetLoginURL to add the access_type and approval_prompt parameters
@@ -54,15 +63,19 @@ func (p *Security365Provider) Redeem(ctx context.Context, _, code, codeVerifier 
 	if code == "" {
 		return nil, ErrMissingCode
 	}
+	host := p.Data().LoginURL.Host
+	extra := p.Data().Extra
+	clientId := p.Data().ClientID
+	clientSecret := p.Data().ClientSecret
 
 	// Get Access Token from Security365
-	accessToken, err := getSecurity365AccessToken(p.Data().LoginURL.Host, p.Data().Extra, p.Data().ClientID, p.Data().ClientSecret)
+	accessToken, err := getSecurity365AccessToken(host, extra, clientId, clientSecret)
 	if err != nil {
 		return nil, err
 	}
 
 	// Get Public Key from Security365
-	rsapubkey, err := getCompanyRSAPubKey(p.Data().LoginURL.Host, p.Data().Extra, accessToken)
+	rsapubkey, err := getCompanyRSAPubKey(host, extra, accessToken)
 	if err != nil {
 		return nil, err
 	}
@@ -73,10 +86,8 @@ func (p *Security365Provider) Redeem(ctx context.Context, _, code, codeVerifier 
 		return nil, errors.New("missing client secret")
 	}
 	authInfo := p.makeBasicBase64Encoded()
-	redeemURL := p.Data().RedeemURL.String()
-
 	params := url.Values{}
-	params.Add("extra", p.Data().Extra)
+	params.Add("extra", extra)
 	params.Add("redirect_uri", p.RedirectURI)
 	params.Add("code", code)
 	params.Add("grant_type", "authorization_code")
@@ -88,7 +99,7 @@ func (p *Security365Provider) Redeem(ctx context.Context, _, code, codeVerifier 
 		Scope        string `json:"scope"`
 		Jwt          string `json:"jwt"`
 	}
-	err = requests.New(redeemURL).
+	err = requests.New(p.TokenURL).
 		WithContext(ctx).
 		WithMethod("POST").
 		WithBody(bytes.NewBufferString(params.Encode())).
@@ -127,10 +138,24 @@ func (p *Security365Provider) Redeem(ctx context.Context, _, code, codeVerifier 
 		RefreshToken: jsonResponse.RefreshToken,
 		Email:        security365JWT.UserEmail,
 		User:         security365JWT.UserName,
+		AllowPolicy:  "",
 	}
 
 	session.CreatedAtNow()
 	session.ExpiresIn(time.Duration(jsonResponse.ExpiresIn) * time.Second)
+
+	allowPolicy, denyPolicy, err := getCustomProfileInfo(host, extra, accessToken, security365JWT.UserName)
+	if err == nil {
+		session.AllowPolicy = allowPolicy
+		session.DenyPolicy = denyPolicy
+		// 전역으로 가지고 있는건 서비스가 리셋된 상태에서 세션이 남아 있을때 제어가 안되는 문제가 있다.
+		// s := GetSecurity365RuleMgrInstance()
+		// err = s.AddItem(security365JWT.UserName, userPolicy)
+		// if err != nil {
+		// 	return nil, err
+		// }
+	}
+
 	return session, nil
 }
 
@@ -286,7 +311,7 @@ https://devlogin.softcamp.co.kr/SCCloudOAuthService/3CJ55MSE-xLO7Sxt4-qUBKzbcs-X
 }
 */
 
-func getCustomProfileInfo(domain, extra, accessToken, userId string) (string, error) {
+func getCustomProfileInfo(domain, extra, accessToken, userId string) (string, string, error) {
 	type CustomProfileInfo struct {
 		Key   string `json:"key"`
 		Value string `json:"value"`
@@ -307,17 +332,20 @@ func getCustomProfileInfo(domain, extra, accessToken, userId string) (string, er
 		Do().
 		UnmarshalInto(&customProfileInfo)
 	if err != nil {
-		return "", err
+		return "", "", err
 	}
 
+	allowPolicy := ""
+	denyPolicy := ""
 	for _, info := range customProfileInfo.CustomProfileInfo {
-		if info.Key == "RequestPolicyUse" && info.Use {
-			println(info.Value)
-		} else if info.Key == "RequestPolicyAllowed" && info.Use {
-			println(info.Value)
+		if info.Key == "RequestPolicyAllowed" && info.Use {
+			allowPolicy = info.Value
+		} else if info.Key == "RequestPolicyDenied" && info.Use {
+			denyPolicy = info.Value
 		}
+
 	}
-	return "", errors.New("not found RequestPolicyAllowed")
+	return allowPolicy, denyPolicy, nil
 }
 
 func getCompanyRSAPubKey(domain, extra, accessToken string) (*rsa.PublicKey, error) {

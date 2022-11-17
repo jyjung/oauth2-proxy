@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="487" failures="1">
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7" tests="46" failures="0" errors="0" id="0" hostname="DESKTOP-BVSHL7I" time="0.100" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestMainSuite" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.030">
+			<system-out><![CDATA[Running Suite: Main Suite
+=========================
+Random Seed: [1m1668561187[0m
+Will run [1m5[0m of [1m5[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 5 of 5 Specs in 0.026 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m5 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+		<testcase name="TestValidatorOverwriteEmailListDirectly" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorOverwriteEmailListDirectly/FirstEmailInList" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorOverwriteEmailListDirectly/SecondEmailInList" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorOverwriteEmailListDirectly/EmailNotInListThatMatchesNoDomains" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorOverwriteEmailListDirectly/email_removed_from_list" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorOverwriteEmailListDirectly/email_retained_in_list" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorOverwriteEmailListDirectly/email_added_to_list" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.020"></testcase>
+		<testcase name="TestValidatorCases/EmailNotInCorrect1stSubDomainsNotInEmails" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailNotInCorrect1stSubDomainsNotInEmailsWildcard" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailInFirstDomain" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailInFirstDomainWildcard" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailNotInCorrect2ndSubDomainsNotInEmails" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailInSecondDomain" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailInSecondDomainWildcard" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailInFirstEmailList" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailInFirstEmailListWildcard" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailNotInDomainsNotInEmails" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailInLastEmailList" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailIn1stSubdomain" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailIn2ndSubdomain" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailNotInAnySubdomain" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailInLastSubdomain" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailDomainNotCompletelyMatch" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/HackerExtraDomainPrefix1" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/HackerExtraDomainPrefix2" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmptyDomainAndEmailList" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailMatchWithAllowedEmails" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailFromSameDomainButNotInList" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailMatchOnDomain" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailMatchOnDomain2" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailFromFirstDomainShouldValidate" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/EmailFromSecondDomainShouldValidate" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/FirstEmailInListShouldValidate" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/SecondEmailInListShouldValidate" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.010"></testcase>
+		<testcase name="TestValidatorCases/EmailNotInListThatMatchesNoDomains_" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/LoadedEmailAddressesAreNotLowerCased" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/ValidatedEmailAddressesAreNotLowerCased" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/LoadedDomainsAreNotLowerCased" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/ValidatedDomainsAreNotLowerCased" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/IgnoreSpacesInAuthEmails" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/IgnorePrefixSpacesInAuthEmails" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/CheckForEqualityNotSuffix" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/CheckForEqualityNotSuffix2" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+		<testcase name="TestValidatorCases/CheckForEqualityNotSuffixWildcard" classname="github.com/oauth2-proxy/oauth2-proxy/v7" time="0.000"></testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/ip" tests="0" failures="0" errors="0" id="1" hostname="DESKTOP-BVSHL7I" time="0.000" timestamp="2022-11-16T10:13:15+09:00"></testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/middleware" tests="1" failures="0" errors="0" id="2" hostname="DESKTOP-BVSHL7I" time="0.038" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestMiddlewareSuite" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/middleware" time="0.000">
+			<system-out><![CDATA[Running Suite: Middleware API
+=============================
+Random Seed: [1m1668561186[0m
+Will run [1m3[0m of [1m3[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 3 of 3 Specs in 0.000 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m3 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/options" tests="1" failures="0" errors="0" id="3" hostname="DESKTOP-BVSHL7I" time="0.041" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestOptionsSuite" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/options" time="0.030">
+			<system-out><![CDATA[Running Suite: Options Suite
+============================
+Random Seed: [1m1668561186[0m
+Will run [1m65[0m of [1m65[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 65 of 65 Specs in 0.013 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m65 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/options/util" tests="1" failures="0" errors="0" id="4" hostname="DESKTOP-BVSHL7I" time="0.047" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestUtilSuite" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/options/util" time="0.000">
+			<system-out><![CDATA[Running Suite: Options Util Suite
+=================================
+Random Seed: [1m1668561186[0m
+Will run [1m6[0m of [1m6[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 6 of 6 Specs in 0.001 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m6 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" tests="58" failures="0" errors="0" id="5" hostname="DESKTOP-BVSHL7I" time="0.103" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestCreatedAtNow" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestExpiresIn" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestString" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestString/Minimal_Session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestString/Full_Session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestString/With_a_CreatedAt" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestString/With_an_ExpiresOn" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestString/With_an_AccessToken" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestString/With_an_IDToken" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestString/With_a_RefreshToken" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestIsExpired" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestAge" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.050"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/16_byte_secret" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/16_byte_secret/CFB_cipher" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/16_byte_secret/CFB_cipher/No_ExpiresOn" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/16_byte_secret/CFB_cipher/No_PreferredUsername" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/16_byte_secret/CFB_cipher/Minimal_session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/16_byte_secret/CFB_cipher/Bearer_authorization_header_created_session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/16_byte_secret/CFB_cipher/With_groups" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/16_byte_secret/CFB_cipher/Full_session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/16_byte_secret/GCM_cipher" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/16_byte_secret/GCM_cipher/No_ExpiresOn" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/16_byte_secret/GCM_cipher/No_PreferredUsername" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/16_byte_secret/GCM_cipher/Minimal_session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/16_byte_secret/GCM_cipher/Bearer_authorization_header_created_session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/16_byte_secret/GCM_cipher/With_groups" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/16_byte_secret/GCM_cipher/Full_session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/24_byte_secret" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.040"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/24_byte_secret/CFB_cipher" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.040"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/24_byte_secret/CFB_cipher/Full_session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/24_byte_secret/CFB_cipher/No_ExpiresOn" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/24_byte_secret/CFB_cipher/No_PreferredUsername" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/24_byte_secret/CFB_cipher/Minimal_session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/24_byte_secret/CFB_cipher/Bearer_authorization_header_created_session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.040"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/24_byte_secret/CFB_cipher/With_groups" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/24_byte_secret/GCM_cipher" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/24_byte_secret/GCM_cipher/Full_session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/24_byte_secret/GCM_cipher/No_ExpiresOn" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/24_byte_secret/GCM_cipher/No_PreferredUsername" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/24_byte_secret/GCM_cipher/Minimal_session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/24_byte_secret/GCM_cipher/Bearer_authorization_header_created_session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/24_byte_secret/GCM_cipher/With_groups" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/32_byte_secret" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/32_byte_secret/CFB_cipher" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/32_byte_secret/CFB_cipher/Full_session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/32_byte_secret/CFB_cipher/No_ExpiresOn" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/32_byte_secret/CFB_cipher/No_PreferredUsername" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/32_byte_secret/CFB_cipher/Minimal_session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/32_byte_secret/CFB_cipher/Bearer_authorization_header_created_session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/32_byte_secret/CFB_cipher/With_groups" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/32_byte_secret/GCM_cipher" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/32_byte_secret/GCM_cipher/With_groups" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/32_byte_secret/GCM_cipher/Full_session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/32_byte_secret/GCM_cipher/No_ExpiresOn" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/32_byte_secret/GCM_cipher/No_PreferredUsername" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/32_byte_secret/GCM_cipher/Minimal_session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeSessionState/32_byte_secret/GCM_cipher/Bearer_authorization_header_created_session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions" time="0.000"></testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/app/pagewriter" tests="1" failures="0" errors="0" id="6" hostname="DESKTOP-BVSHL7I" time="0.093" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestOptionsSuite" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/app/pagewriter" time="0.060">
+			<system-out><![CDATA[Running Suite: App Suite
+========================
+Random Seed: [1m1668561186[0m
+Will run [1m51[0m of [1m51[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 51 of 51 Specs in 0.025 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m51 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/app/redirect" tests="1" failures="0" errors="0" id="7" hostname="DESKTOP-BVSHL7I" time="0.313" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestOptionsSuite" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/app/redirect" time="0.260">
+			<system-out><![CDATA[Running Suite: Redirect Suite
+=============================
+Random Seed: [1m1668561186[0m
+Will run [1m635[0m of [1m635[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 635 of 635 Specs in 0.023 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m635 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/authentication/basic" tests="1" failures="0" errors="0" id="8" hostname="DESKTOP-BVSHL7I" time="0.083" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestBasicSuite" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/authentication/basic" time="0.050">
+			<system-out><![CDATA[Running Suite: Basic
+====================
+Random Seed: [1m1668561186[0m
+Will run [1m23[0m of [1m23[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 23 of 23 Specs in 0.035 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m23 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/clock" tests="1" failures="1" errors="0" id="9" hostname="DESKTOP-BVSHL7I" time="0.408" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestClockSuite" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/clock" time="0.380">
+			<failure message="Failed"><![CDATA[Running Suite: Clock
+====================
+Random Seed: [1m1668561186[0m
+Will run [1m21[0m of [1m21[0m specs
+
+[32m•[0m
+[90m------------------------------[0m
+[91m[1m• Failure [0.072 seconds][0m
+Clock suite
+[90m/home/jung/publicgit/oauth2-proxy/pkg/clock/clock_test.go:18[0m
+  Global time not overridden
+  [90m/home/jung/publicgit/oauth2-proxy/pkg/clock/clock_test.go:26[0m
+    Clock not mocked via Set
+    [90m/home/jung/publicgit/oauth2-proxy/pkg/clock/clock_test.go:32[0m
+      [91m[1muses time.After for After [It][0m
+      [90m/home/jung/publicgit/oauth2-proxy/pkg/clock/clock_test.go:38[0m
+
+      [91mExpected
+          <int32>: 1
+      to equal
+          <int32>: 0[0m
+
+      /home/jung/publicgit/oauth2-proxy/pkg/clock/clock_test.go:55
+[90m------------------------------[0m
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+
+[91m[1mSummarizing 1 Failure:[0m
+
+[91m[1m[Fail] [0m[90mClock suite [0m[0mGlobal time not overridden [0m[90mClock not mocked via Set [0m[91m[1m[It] uses time.After for After [0m
+[37m/home/jung/publicgit/oauth2-proxy/pkg/clock/clock_test.go:55[0m
+
+[1m[91mRan 21 of 21 Specs in 0.356 seconds[0m
+[1m[91mFAIL![0m -- [32m[1m20 Passed[0m | [91m[1m1 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/cookies" tests="1" failures="0" errors="0" id="10" hostname="DESKTOP-BVSHL7I" time="0.032" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestProviderSuite" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/cookies" time="0.020">
+			<system-out><![CDATA[Running Suite: Cookies
+======================
+Random Seed: [1m1668561186[0m
+Will run [1m25[0m of [1m25[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 25 of 25 Specs in 0.011 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m25 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" tests="135" failures="0" errors="0" id="11" hostname="DESKTOP-BVSHL7I" time="0.022" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestEncodeAndDecodeAccessToken" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncodeAndDecodeAccessTokenB64" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.010"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/16" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/16/Standard" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/16/Standard/10" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/16/Standard/100" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/16/Standard/1000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/16/Standard/5000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/16/Standard/10000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/16/Base64" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/16/Base64/10" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/16/Base64/100" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/16/Base64/1000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/16/Base64/5000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/16/Base64/10000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/24" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/24/Standard" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/24/Standard/10" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/24/Standard/100" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/24/Standard/1000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/24/Standard/5000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/24/Standard/10000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/24/Base64" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/24/Base64/10" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/24/Base64/100" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/24/Base64/1000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/24/Base64/5000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/24/Base64/10000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/32" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/32/Standard" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/32/Standard/10" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/32/Standard/100" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/32/Standard/1000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/32/Standard/5000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/32/Standard/10000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/32/Base64" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/32/Base64/10" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/32/Base64/100" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/32/Base64/1000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/32/Base64/5000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/CFB/32/Base64/10000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/16" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/16/Standard" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/16/Standard/10" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/16/Standard/100" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/16/Standard/1000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/16/Standard/5000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/16/Standard/10000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/16/Base64" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/16/Base64/10" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/16/Base64/100" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/16/Base64/1000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/16/Base64/5000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/16/Base64/10000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/24" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/24/Standard" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/24/Standard/10" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/24/Standard/100" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/24/Standard/1000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/24/Standard/5000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/24/Standard/10000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/24/Base64" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/24/Base64/10" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/24/Base64/100" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/24/Base64/1000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/24/Base64/5000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/24/Base64/10000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/32" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/32/Standard" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/32/Standard/10" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/32/Standard/100" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/32/Standard/1000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/32/Standard/5000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/32/Standard/10000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/32/Base64" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/32/Base64/10" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/32/Base64/100" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/32/Base64/1000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/32/Base64/5000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestEncryptAndDecrypt/GCM/32/Base64/10000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestDecryptCFBWrongSecret" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestDecryptGCMWrongSecret" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestGCMtoCFBErrors" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestGCMtoCFBErrors/16" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestGCMtoCFBErrors/16/10" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestGCMtoCFBErrors/16/100" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestGCMtoCFBErrors/16/1000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestGCMtoCFBErrors/16/5000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestGCMtoCFBErrors/16/10000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestGCMtoCFBErrors/24" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestGCMtoCFBErrors/24/10" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestGCMtoCFBErrors/24/100" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestGCMtoCFBErrors/24/1000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestGCMtoCFBErrors/24/5000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestGCMtoCFBErrors/24/10000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestGCMtoCFBErrors/32" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestGCMtoCFBErrors/32/10" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestGCMtoCFBErrors/32/100" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestGCMtoCFBErrors/32/1000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestGCMtoCFBErrors/32/5000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestGCMtoCFBErrors/32/10000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestCFBtoGCMErrors" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestCFBtoGCMErrors/16" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestCFBtoGCMErrors/16/10" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestCFBtoGCMErrors/16/100" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestCFBtoGCMErrors/16/1000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestCFBtoGCMErrors/16/5000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestCFBtoGCMErrors/16/10000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestCFBtoGCMErrors/24" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestCFBtoGCMErrors/24/10" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestCFBtoGCMErrors/24/100" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestCFBtoGCMErrors/24/1000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestCFBtoGCMErrors/24/5000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestCFBtoGCMErrors/24/10000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestCFBtoGCMErrors/32" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestCFBtoGCMErrors/32/10" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestCFBtoGCMErrors/32/100" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestCFBtoGCMErrors/32/1000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestCFBtoGCMErrors/32/5000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestCFBtoGCMErrors/32/10000" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestSecretBytesEncoded" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestSecretBytesEncoded/16" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestSecretBytesEncoded/24" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestSecretBytesEncoded/32" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestSecretBytesEncodedWrongSize" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestSecretBytesEncodedWrongSize/15" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestSecretBytesEncodedWrongSize/20" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestSecretBytesEncodedWrongSize/28" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestSecretBytesEncodedWrongSize/33" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestSecretBytesEncodedWrongSize/44" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestSecretBytesNonBase64" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+		<testcase name="TestSignAndValidate" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption" time="0.000"></testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/header" tests="1" failures="0" errors="0" id="12" hostname="DESKTOP-BVSHL7I" time="0.030" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestHeaderSuite" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/header" time="0.000">
+			<system-out><![CDATA[Running Suite: Header
+=====================
+Random Seed: [1m1668561186[0m
+Will run [1m14[0m of [1m14[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 14 of 14 Specs in 0.001 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m14 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/http" tests="1" failures="0" errors="0" id="13" hostname="DESKTOP-BVSHL7I" time="0.711" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestHTTPSuite" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/http" time="0.700">
+			<system-out><![CDATA[Running Suite: HTTP
+===================
+Random Seed: [1m1668561186[0m
+Will run [1m77[0m of [1m77[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 77 of 77 Specs in 0.679 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m77 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/ip" tests="9" failures="0" errors="0" id="14" hostname="DESKTOP-BVSHL7I" time="0.030" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestEmptyNetSet" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/ip" time="0.000"></testcase>
+		<testcase name="TestV4ContainsEverything" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/ip" time="0.000"></testcase>
+		<testcase name="TestV6ContainsEverything" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/ip" time="0.000"></testcase>
+		<testcase name="TestLocalhostOnly" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/ip" time="0.000"></testcase>
+		<testcase name="TestGetRealClientIPParser" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/ip" time="0.000"></testcase>
+		<testcase name="TestXForwardedForClientIPParser" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/ip" time="0.000"></testcase>
+		<testcase name="TestXForwardedForClientIPParserIgnoresOthers" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/ip" time="0.000"></testcase>
+		<testcase name="TestGetRemoteIP" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/ip" time="0.000"></testcase>
+		<testcase name="TestGetClientString" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/ip" time="0.000"></testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/logger" tests="0" failures="0" errors="0" id="15" hostname="DESKTOP-BVSHL7I" time="0.000" timestamp="2022-11-16T10:13:15+09:00"></testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/middleware" tests="1" failures="0" errors="0" id="16" hostname="DESKTOP-BVSHL7I" time="5.559" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestMiddlewareSuite" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/middleware" time="5.540">
+			<system-out><![CDATA[Running Suite: Middleware
+=========================
+Random Seed: [1m1668561187[0m
+Will run [1m146[0m of [1m146[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[90m------------------------------[0m
+[32m• [SLOW TEST:5.006 seconds][0m
+Stored Session Suite
+[90m/home/jung/publicgit/oauth2-proxy/pkg/middleware/stored_session_test.go:85[0m
+  refreshSessionIfNeeded
+  [90m/home/jung/publicgit/oauth2-proxy/pkg/middleware/stored_session_test.go:439[0m
+    with a session
+    [90m/home/jung/publicgit/oauth2-proxy/pkg/middleware/stored_session_test.go:453[0m
+      when obtaining lock failed with a valid session
+      [90m/home/jung/publicgit/oauth2-proxy/pkg/middleware/stored_session_test.go:579[0m
+[90m------------------------------[0m
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 146 of 146 Specs in 5.518 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m146 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/providers/oidc" tests="1" failures="0" errors="0" id="17" hostname="DESKTOP-BVSHL7I" time="0.453" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestOIDCSuite" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/providers/oidc" time="0.440">
+			<system-out><![CDATA[Running Suite: OIDC
+===================
+Random Seed: [1m1668561187[0m
+Will run [1m29[0m of [1m29[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 29 of 29 Specs in 0.436 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m29 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/providers/util" tests="1" failures="0" errors="0" id="18" hostname="DESKTOP-BVSHL7I" time="0.081" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestProviderUtilSuite" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/providers/util" time="0.050">
+			<system-out><![CDATA[Running Suite: Provider Utils
+=============================
+Random Seed: [1m1668561187[0m
+Will run [1m28[0m of [1m28[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 28 of 28 Specs in 0.049 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m28 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/requests" tests="1" failures="0" errors="0" id="19" hostname="DESKTOP-BVSHL7I" time="0.106" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestRequetsSuite" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/requests" time="0.060">
+			<system-out><![CDATA[Running Suite: Requests Suite
+=============================
+Random Seed: [1m1668561187[0m
+Will run [1m75[0m of [1m75[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 75 of 75 Specs in 0.009 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m75 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/requests/util" tests="1" failures="0" errors="0" id="20" hostname="DESKTOP-BVSHL7I" time="0.062" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestRequestUtilSuite" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/requests/util" time="0.010">
+			<system-out><![CDATA[Running Suite: Request Utils
+============================
+Random Seed: [1m1668561187[0m
+Will run [1m12[0m of [1m12[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 12 of 12 Specs in 0.001 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m12 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions" tests="1" failures="0" errors="0" id="21" hostname="DESKTOP-BVSHL7I" time="0.012" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestSessionStore" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions" time="0.000">
+			<system-out><![CDATA[Running Suite: SessionStore
+===========================
+Random Seed: [1m1668561187[0m
+Will run [1m3[0m of [1m3[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 3 of 3 Specs in 0.000 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m3 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" tests="28" failures="0" errors="0" id="22" hostname="DESKTOP-BVSHL7I" time="0.344" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestSessionStore" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.050">
+			<system-out><![CDATA[Running Suite: Cookie SessionStore
+==================================
+Random Seed: [1m1668561187[0m
+Will run [1m60[0m of [1m60[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 60 of 60 Specs in 0.006 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m60 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+		<testcase name="Test_copyCookie" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.000"></testcase>
+		<testcase name="Test_splitCookie" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.000"></testcase>
+		<testcase name="Test_splitCookie/With_short_name_and_attributes" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.000"></testcase>
+		<testcase name="Test_splitCookie/With_max_length_name_and_attributes" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.000"></testcase>
+		<testcase name="Test_splitCookie/Short_cookie_name" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.000"></testcase>
+		<testcase name="Test_splitCookie/Long_cookie_name" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.000"></testcase>
+		<testcase name="Test_splitCookie/Max_cookie_name" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.000"></testcase>
+		<testcase name="Test_splitCookie/Suffix_overflow_cookie_name" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.000"></testcase>
+		<testcase name="Test_splitCookie/Double_digit_suffix_cookie_name_overflow" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.000"></testcase>
+		<testcase name="Test_splitCookieName" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.000"></testcase>
+		<testcase name="Test_splitCookieName/Standard_length" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.000"></testcase>
+		<testcase name="Test_splitCookieName/Max_length" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.000"></testcase>
+		<testcase name="Test_splitCookieName/Large_count_overflow" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.000"></testcase>
+		<testcase name="Test_splitCookie_joinCookies" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.270"></testcase>
+		<testcase name="Test_splitCookie_joinCookies/1_length_cookie_name" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.060"></testcase>
+		<testcase name="Test_splitCookie_joinCookies/10_length_cookie_name" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.050"></testcase>
+		<testcase name="Test_splitCookie_joinCookies/50_length_cookie_name" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.040"></testcase>
+		<testcase name="Test_splitCookie_joinCookies/100_length_cookie_name" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.040"></testcase>
+		<testcase name="Test_splitCookie_joinCookies/200_length_cookie_name" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.040"></testcase>
+		<testcase name="Test_splitCookie_joinCookies/254_length_cookie_name" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.040"></testcase>
+		<testcase name="Test_joinCookies_withUnderlineSuffix" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.000"></testcase>
+		<testcase name="Test_joinCookies_withUnderlineSuffix/Ascending_order_split_with_&#34;_&#34;_suffix" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.000"></testcase>
+		<testcase name="Test_joinCookies_withUnderlineSuffix/Descending_order_split_with_&#34;_&#34;_suffix" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.000"></testcase>
+		<testcase name="Test_joinCookies_withUnderlineSuffix/Arbitrary_order_split_with_&#34;_&#34;_suffix" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.000"></testcase>
+		<testcase name="Test_joinCookies_withUnderlineSuffix/Arbitrary_order_split_with_&#34;_0&#34;_suffix" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.000"></testcase>
+		<testcase name="Test_joinCookies_withUnderlineSuffix/Arbitrary_order_split_with_&#34;_1&#34;_suffix" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.000"></testcase>
+		<testcase name="Test_joinCookies_withUnderlineSuffix/Arbitrary_order_split_with_&#34;__&#34;_suffix" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/cookie" time="0.000"></testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/persistence" tests="1" failures="0" errors="0" id="23" hostname="DESKTOP-BVSHL7I" time="0.093" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestPersistenceSuite" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/persistence" time="0.080">
+			<system-out><![CDATA[Running Suite: Persistence
+==========================
+Random Seed: [1m1668561187[0m
+Will run [1m101[0m of [1m101[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 101 of 101 Specs in 0.010 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m101 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/redis" tests="1" failures="0" errors="0" id="24" hostname="DESKTOP-BVSHL7I" time="4.769" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestSessionStore" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/redis" time="4.750">
+			<system-out><![CDATA[Running Suite: Redis SessionStore
+=================================
+Random Seed: [1m1668561187[0m
+Will run [1m1104[0m of [1m1104[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 1104 of 1104 Specs in 4.027 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m1104 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/sessions/tests" tests="0" failures="0" errors="0" id="25" hostname="DESKTOP-BVSHL7I" time="0.000" timestamp="2022-11-16T10:13:15+09:00"></testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/upstream" tests="1" failures="0" errors="0" id="26" hostname="DESKTOP-BVSHL7I" time="0.043" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestUpstreamSuite" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/upstream" time="0.030">
+			<system-out><![CDATA[Running Suite: Upstream Suite
+=============================
+Random Seed: [1m1668561187[0m
+Will run [1m56[0m of [1m56[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 56 of 56 Specs in 0.018 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m56 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/util" tests="2" failures="0" errors="0" id="27" hostname="DESKTOP-BVSHL7I" time="0.011" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestGetCertPool_NoRoots" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/util" time="0.000"></testcase>
+		<testcase name="TestGetCertPool" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/util" time="0.000"></testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" tests="28" failures="0" errors="0" id="28" hostname="DESKTOP-BVSHL7I" time="0.322" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestValidateCookie" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestValidateCookie/with_valid_configuration" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestValidateCookie/with_no_cookie_secret" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestValidateCookie/with_an_invalid_cookie_secret" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestValidateCookie/with_a_valid_Base64_secret" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestValidateCookie/with_an_invalid_Base64_secret" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestValidateCookie/with_an_invalid_name" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestValidateCookie/with_a_name_that_is_too_long" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestValidateCookie/with_refresh_longer_than_expire" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestValidateCookie/with_samesite_&#34;none&#34;" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestValidateCookie/with_samesite_&#34;lax&#34;" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestValidateCookie/with_samesite_&#34;strict&#34;" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestValidateCookie/with_samesite_&#34;invalid&#34;" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestValidateCookie/with_a_combination_of_configuration_errors" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestNewOptions" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestGoogleGroupOptions" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestGoogleGroupInvalidFile" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestInitializedOptions" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestRedirectURL" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestCookieRefreshMustBeLessThanCookieExpire" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestBase64CookieSecret" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestValidateSignatureKey" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000">
+			<system-out><![CDATA[[2022/11/16 10:13:07] [options.go:115] WARNING: `--signature-key` is deprecated. It will be removed in a future release]]></system-out>
+		</testcase>
+		<testcase name="TestValidateSignatureKeyInvalidSpec" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000">
+			<system-out><![CDATA[[2022/11/16 10:13:07] [options.go:115] WARNING: `--signature-key` is deprecated. It will be removed in a future release]]></system-out>
+		</testcase>
+		<testcase name="TestValidateSignatureKeyUnsupportedAlgorithm" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000">
+			<system-out><![CDATA[[2022/11/16 10:13:07] [options.go:115] WARNING: `--signature-key` is deprecated. It will be removed in a future release]]></system-out>
+		</testcase>
+		<testcase name="TestGCPHealthcheck" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestRealClientIPHeader" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestProviderCAFilesError" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.000"></testcase>
+		<testcase name="TestValidationSuite" classname="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/validation" time="0.310">
+			<system-out><![CDATA[Running Suite: Validation Suite
+===============================
+Random Seed: [1m1668561187[0m
+Will run [1m63[0m of [1m63[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0mredis: 2022/11/16 10:13:08 sentinel.go:697: sentinel: Sentinels master="mymaster" failed: ERR unknown command 'SENTINELS'
+redis: 2022/11/16 10:13:08 sentinel.go:676: sentinel: new master="mymaster" addr="127.0.0.1:33141"
+redis: 2022/11/16 10:13:08 pubsub.go:168: redis: discarding bad PubSub connection: EOF
+[32m•[0mredis: 2022/11/16 10:13:08 sentinel.go:697: sentinel: Sentinels master="mymaster" failed: ERR unknown command 'SENTINELS'
+redis: 2022/11/16 10:13:08 sentinel.go:676: sentinel: new master="mymaster" addr="127.0.0.1:46263"
+[32m•[0mredis: 2022/11/16 10:13:08 pubsub.go:168: redis: discarding bad PubSub connection: EOF
+redis: 2022/11/16 10:13:08 sentinel.go:697: sentinel: Sentinels master="mymaster" failed: ERR unknown command 'SENTINELS'
+redis: 2022/11/16 10:13:08 sentinel.go:676: sentinel: new master="mymaster" addr="127.0.0.1:43745"
+redis: 2022/11/16 10:13:08 pubsub.go:168: redis: discarding bad PubSub connection: EOF
+[32m•[0mredis: 2022/11/16 10:13:08 sentinel.go:528: sentinel: GetMasterAddrByName master="WRONG" failed: redis: nil
+redis: 2022/11/16 10:13:08 sentinel.go:528: sentinel: GetMasterAddrByName master="WRONG" failed: redis: nil
+[32m•[0mredis: 2022/11/16 10:13:08 sentinel.go:528: sentinel: GetMasterAddrByName master="mymaster" failed: dial tcp 127.0.0.1:65535: connect: connection refused
+redis: 2022/11/16 10:13:08 sentinel.go:528: sentinel: GetMasterAddrByName master="mymaster" failed: dial tcp 127.0.0.1:65535: connect: connection refused
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 63 of 63 Specs in 0.304 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m63 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+	</testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/pkg/watcher" tests="0" failures="0" errors="0" id="29" hostname="DESKTOP-BVSHL7I" time="0.000" timestamp="2022-11-16T10:13:15+09:00"></testsuite>
+	<testsuite name="github.com/oauth2-proxy/oauth2-proxy/v7/providers" tests="162" failures="0" errors="0" id="30" hostname="DESKTOP-BVSHL7I" time="7.339" timestamp="2022-11-16T10:13:15+09:00">
+		<testcase name="TestNewAzureProvider" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestAzureProviderOverrides" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestAzureSetTenant" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestAzureProviderEnrichSession" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.010"></testcase>
+		<testcase name="TestAzureProviderEnrichSession/should_return_email_using_mail_property_from_Azure_backend" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000">
+			<system-out><![CDATA[[2022/11/16 10:13:07] [azure.go:200] unable to get email and/or groups claims from token: unable to verify token: unable to verify access token: failed to verify token: oidc: malformed jwt: oidc: malformed jwt, expected 3 parts got 1]]></system-out>
+		</testcase>
+		<testcase name="TestAzureProviderEnrichSession/should_return_email_using_otherMails_property_returned_from_Azure_backend" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000">
+			<system-out><![CDATA[[2022/11/16 10:13:07] [azure.go:200] unable to get email and/or groups claims from token: unable to verify token: unable to verify access token: failed to verify token: oidc: malformed jwt: oidc: malformed jwt, expected 3 parts got 1]]></system-out>
+		</testcase>
+		<testcase name="TestAzureProviderEnrichSession/should_return_email_using_userPrincipalName_from_Azure_backend" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000">
+			<system-out><![CDATA[[2022/11/16 10:13:07] [azure.go:200] unable to get email and/or groups claims from token: unable to verify token: unable to verify access token: failed to verify token: oidc: malformed jwt: oidc: malformed jwt, expected 3 parts got 1]]></system-out>
+		</testcase>
+		<testcase name="TestAzureProviderEnrichSession/should_return_error_when_Azure_backend_doesn&#39;t_return_email_information" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000">
+			<system-out><![CDATA[[2022/11/16 10:13:07] [azure.go:200] unable to get email and/or groups claims from token: unable to verify token: unable to verify access token: failed to verify token: oidc: malformed jwt: oidc: malformed jwt, expected 3 parts got 1
+[2022/11/16 10:13:07] [azure.go:447] unable to find userPrincipalName: type assertion to string failed]]></system-out>
+		</testcase>
+		<testcase name="TestAzureProviderEnrichSession/should_return_specific_error_when_unable_to_get_email" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000">
+			<system-out><![CDATA[[2022/11/16 10:13:07] [azure.go:200] unable to get email and/or groups claims from token: unable to verify token: unable to verify access token: failed to verify token: oidc: malformed jwt: oidc: malformed jwt, expected 3 parts got 1]]></system-out>
+		</testcase>
+		<testcase name="TestAzureProviderEnrichSession/should_return_error_when_otherMails_from_Azure_backend_is_not_a_valid_type" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000">
+			<system-out><![CDATA[[2022/11/16 10:13:07] [azure.go:200] unable to get email and/or groups claims from token: unable to verify token: unable to verify access token: failed to verify token: oidc: malformed jwt: oidc: malformed jwt, expected 3 parts got 1
+[2022/11/16 10:13:07] [azure.go:447] unable to find userPrincipalName: type assertion to string failed]]></system-out>
+		</testcase>
+		<testcase name="TestAzureProviderEnrichSession/should_not_query_profile_api_when_email_is_already_set_in_session" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000">
+			<system-out><![CDATA[[2022/11/16 10:13:07] [azure.go:200] unable to get email and/or groups claims from token: unable to verify token: unable to verify access token: failed to verify token: oidc: malformed jwt: oidc: malformed jwt, expected 3 parts got 1]]></system-out>
+		</testcase>
+		<testcase name="TestAzureProviderRedeem" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.590"></testcase>
+		<testcase name="TestAzureProviderRedeem/with_id_token_returned" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.060"></testcase>
+		<testcase name="TestAzureProviderRedeem/without_id_token_returned,_fallback_to_access_token" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.080"></testcase>
+		<testcase name="TestAzureProviderRedeem/id_token_malformed,_fallback_to_access_token" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.090">
+			<system-out><![CDATA[[2022/11/16 10:13:08] [azure.go:291] unable to verify ID token, fallback to access token: failed to verify token: oidc: malformed jwt: oidc: malformed jwt, expected 3 parts got 1]]></system-out>
+		</testcase>
+		<testcase name="TestAzureProviderRedeem/both_id_token_and_access_tokens_are_valid,_return_email_from_id_token" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.220"></testcase>
+		<testcase name="TestAzureProviderRedeem/redeem_URL_failed,_should_return_error" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.140"></testcase>
+		<testcase name="TestAzureProviderProtectedResourceConfiguredOAuthV1" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestAzureProviderProtectedResourceConfiguredOAuthV2" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestAzureProviderRefresh" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.080"></testcase>
+		<testcase name="TestNewBitbucketProvider" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestBitbucketProviderScopeAdjustForTeam" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestBitbucketProviderScopeAdjustForRepository" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestBitbucketProviderOverrides" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestBitbucketProviderGetEmailAddress" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestBitbucketProviderGetEmailAddressAndGroup" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestBitbucketProviderGetEmailAddressFailedRequest" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000">
+			<system-out><![CDATA[[2022/11/16 10:13:08] [bitbucket.go:120] failed making request: unexpected status "403": ]]></system-out>
+		</testcase>
+		<testcase name="TestBitbucketProviderGetEmailAddressEmailNotPresentInPayload" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestNewDigitalOceanProvider" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestDigitalOceanProviderOverrides" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestDigitalOceanProviderGetEmailAddress" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestDigitalOceanProviderGetEmailAddressFailedRequest" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestDigitalOceanProviderGetEmailAddressEmailNotPresentInPayload" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestNewFacebookProvider" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestNewGitHubProvider" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGitHubProviderOverrides" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGitHubProvider_getEmail" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGitHubProvider_getEmailNotVerified" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGitHubProvider_getEmailWithOrg" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000">
+			<system-out><![CDATA[[2022/11/16 10:13:08] [github.go:172] Found Github Organization: "testorg1"]]></system-out>
+		</testcase>
+		<testcase name="TestGitHubProvider_getEmailWithWriteAccessToPublicRepo" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGitHubProvider_getEmailWithReadOnlyAccessToPrivateRepo" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGitHubProvider_getEmailWithWriteAccessToPrivateRepo" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGitHubProvider_getEmailWithNoAccessToPrivateRepo" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGitHubProvider_getEmailWithToken" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGitHubProvider_getEmailFailedRequest" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGitHubProvider_getEmailNotPresentInPayload" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGitHubProvider_getUser" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGitHubProvider_getUserWithRepoAndToken" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000">
+			<system-out><![CDATA[[2022/11/16 10:13:08] [github.go:383] got 204 from "http://127.0.0.1:40187/repos/oauth2-proxy/oauth2-proxy/collaborators/mbland" ]]></system-out>
+		</testcase>
+		<testcase name="TestGitHubProvider_getUserWithRepoAndTokenWithoutPushAccess" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGitHubProvider_getEmailWithUsername" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGitHubProvider_getEmailWithNotAllowedUsername" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGitHubProvider_getEmailWithUsernameAndNotBelongToOrg" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGitHubProvider_getEmailWithUsernameAndNoAccessToPrivateRepo" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestNewGoogleProvider" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGoogleProviderOverrides" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGoogleProviderGetEmailAddress" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGoogleProviderGroupValidator" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGoogleProviderGroupValidator/Email_is_denied_with_groupValidator" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGoogleProviderGroupValidator/Default_does_no_authorization_checks" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGoogleProviderGroupValidator/Email_is_authorized_with_groupValidator" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGoogleProviderGetEmailAddressInvalidEncoding" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGoogleProviderRedeemFailsNoCLientSecret" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000">
+			<system-out><![CDATA[[2022/11/16 10:13:08] [provider_data.go:73] error reading client secret file srvnoerre: open srvnoerre: no such file or directory]]></system-out>
+		</testcase>
+		<testcase name="TestGoogleProviderGetEmailAddressInvalidJson" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGoogleProviderGetEmailAddressEmailMissing" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestGoogleProvider_userInGroup" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000">
+			<system-out><![CDATA[[2022/11/16 10:13:08] [google.go:272] error using get API to check member non-member-out-of-domain@otherexample.com of google group group@example.com: user not in the group]]></system-out>
+		</testcase>
+		<testcase name="TestValidateSessionValidToken" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000">
+			<system-out><![CDATA[[2022/11/16 10:13:08] [internal_util.go:69] 200 GET http://127.0.0.1:43327/oauth/tokeninfo?access_token=foo... only code matters; contents disregarded]]></system-out>
+		</testcase>
+		<testcase name="TestValidateSessionValidTokenWithHeaders" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000">
+			<system-out><![CDATA[[2022/11/16 10:13:08] [internal_util.go:69] 200 GET http://127.0.0.1:40363/oauth/tokeninfo only code matters; contents disregarded]]></system-out>
+		</testcase>
+		<testcase name="TestValidateSessionEmptyToken" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestValidateSessionEmptyValidateURL" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestValidateSessionRequestNetworkFailure" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000">
+			<system-out><![CDATA[[2022/11/16 10:13:08] [internal_util.go:64] GET http://127.0.0.1:35961/oauth/tokeninfo?access_token=foo...
+[2022/11/16 10:13:08] [internal_util.go:65] token validation request failed: error performing request: Get "http://127.0.0.1:35961/oauth/tokeninfo?access_token=foobar": dial tcp 127.0.0.1:35961: connect: connection refused]]></system-out>
+		</testcase>
+		<testcase name="TestValidateSessionExpiredToken" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000">
+			<system-out><![CDATA[[2022/11/16 10:13:08] [internal_util.go:69] 401 GET http://127.0.0.1:35821/oauth/tokeninfo?access_token=foo... only code matters; contents disregarded
+[2022/11/16 10:13:08] [internal_util.go:74] token validation request failed: status 401 - only code matters; contents disregarded]]></system-out>
+		</testcase>
+		<testcase name="TestStripTokenNotPresent" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestStripToken" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestNewLinkedInProvider" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestLinkedInProviderOverrides" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestLinkedInProviderGetEmailAddress" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestLinkedInProviderGetEmailAddressFailedRequest" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestLinkedInProviderGetEmailAddressEmailNotPresentInPayload" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestNewLoginGovProvider" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.160"></testcase>
+		<testcase name="TestLoginGovProviderOverrides" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.090"></testcase>
+		<testcase name="TestLoginGovProviderSessionData" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.420"></testcase>
+		<testcase name="TestLoginGovProviderBadNonce" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.740"></testcase>
+		<testcase name="TestLoginGovProviderGetLoginURL" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.370"></testcase>
+		<testcase name="TestNextcloudProviderDefaults" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestNextcloudProviderOverrides" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestOIDCProviderGetLoginURL" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestOIDCProviderRedeem" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.400"></testcase>
+		<testcase name="TestOIDCProviderRedeem_custom_userid" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.110"></testcase>
+		<testcase name="TestOIDCProviderRefreshSessionIfNeededWithoutIdToken" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.160"></testcase>
+		<testcase name="TestOIDCProviderRefreshSessionIfNeededWithIdToken" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.230"></testcase>
+		<testcase name="TestOIDCProviderCreateSessionFromToken" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.470"></testcase>
+		<testcase name="TestOIDCProviderCreateSessionFromToken/Complex_Groups_Claim" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.180"></testcase>
+		<testcase name="TestOIDCProviderCreateSessionFromToken/Default_IDToken" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.050"></testcase>
+		<testcase name="TestOIDCProviderCreateSessionFromToken/Minimal_IDToken_with_no_email_claim" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.110"></testcase>
+		<testcase name="TestOIDCProviderCreateSessionFromToken/Custom_Groups_Claim" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.140"></testcase>
+		<testcase name="TestProviderData_verifyIDToken" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.450"></testcase>
+		<testcase name="TestProviderData_verifyIDToken/Valid_ID_Token" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.080"></testcase>
+		<testcase name="TestProviderData_verifyIDToken/Invalid_ID_Token" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.240"></testcase>
+		<testcase name="TestProviderData_verifyIDToken/Missing_ID_Token" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestProviderData_verifyIDToken/OIDC_Verifier_not_Configured" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.120"></testcase>
+		<testcase name="TestProviderData_buildSessionFromClaims" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="1.910"></testcase>
+		<testcase name="TestProviderData_buildSessionFromClaims/User_Claim_switched_to_non_string" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.110"></testcase>
+		<testcase name="TestProviderData_buildSessionFromClaims/Email_Claim_Non_Existent" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.080"></testcase>
+		<testcase name="TestProviderData_buildSessionFromClaims/Groups_Claim_Switched" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.240"></testcase>
+		<testcase name="TestProviderData_buildSessionFromClaims/Groups_Claim_Non_Existent" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.120"></testcase>
+		<testcase name="TestProviderData_buildSessionFromClaims/Groups_Claim_Numeric_values" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.330"></testcase>
+		<testcase name="TestProviderData_buildSessionFromClaims/Unverified_Denied" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.200"></testcase>
+		<testcase name="TestProviderData_buildSessionFromClaims/Unverified_Allowed" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.060"></testcase>
+		<testcase name="TestProviderData_buildSessionFromClaims/User_Claim_Switched" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.090"></testcase>
+		<testcase name="TestProviderData_buildSessionFromClaims/Email_Claim_Switched" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.210"></testcase>
+		<testcase name="TestProviderData_buildSessionFromClaims/Email_Claim_Switched_to_Non_String" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.170"></testcase>
+		<testcase name="TestProviderData_buildSessionFromClaims/Groups_Claim_string_values" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.190"></testcase>
+		<testcase name="TestProviderData_buildSessionFromClaims/Standard" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.050"></testcase>
+		<testcase name="TestProviderData_buildSessionFromClaims/Complex_Groups" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.060"></testcase>
+		<testcase name="TestProviderData_checkNonce" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.350"></testcase>
+		<testcase name="TestProviderData_checkNonce/Nonces_match" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.090"></testcase>
+		<testcase name="TestProviderData_checkNonce/Nonces_do_not_match" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.160"></testcase>
+		<testcase name="TestProviderData_checkNonce/Missing_nonce_claim" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.100"></testcase>
+		<testcase name="TestProviderData_loginURLParameters" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestProviderData_loginURLParameters/no_overrides" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestProviderData_loginURLParameters/attempt_to_override_fixed_value" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestProviderData_loginURLParameters/set_one_allowed_and_one_forbidden_enum" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestProviderData_loginURLParameters/replace_default_value" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestProviderData_loginURLParameters/set_free_text_value" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestProviderData_loginURLParameters/attempt_to_set_unapproved_parameter" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestRefresh" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestCodeChallengeConfigured" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestCodeChallengeNotConfigured" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestProviderDataEnrichSession" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestProviderDataAuthorize" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestProviderDataAuthorize/NoAllowedGroups" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestProviderDataAuthorize/NoAllowedGroupsUserHasGroups" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestProviderDataAuthorize/UserInAllowedGroup" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestProviderDataAuthorize/UserNotInAllowedGroup" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestClientSecretFileOptionFails" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000">
+			<system-out><![CDATA[[2022/11/16 10:13:14] [provider_data.go:73] error reading client secret file xyzzyplugh: open xyzzyplugh: no such file or directory]]></system-out>
+		</testcase>
+		<testcase name="TestClientSecretFileOption" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestSkipOIDCDiscovery" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestURLsCorrectlyParsed" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestScope" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestForcedMethodS256" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestForcedMethodPlain" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestPrefersS256" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestCanOverwriteS256" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestInsertItem" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestCheckRule" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestCheckRuleWithRawString" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestDuplicateRule" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestCheckRuleEx" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestRaceConditions" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="Test_makeAuthorizationHeader" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="Test_makeAuthorizationHeader/With_an_empty_prefix,_token_and_no_additional_headers" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="Test_makeAuthorizationHeader/With_a_Bearer_token_type" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="Test_makeAuthorizationHeader/With_a_Token_token_type" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="Test_makeAuthorizationHeader/With_a_Bearer_token_type_and_Accept_application/json" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="Test_makeAuthorizationHeader/With_a_Bearer_token_type_and_multiple_headers" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="Test_getIDToken" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="Test_formatGroup" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="Test_formatGroup/Map_Group" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="Test_formatGroup/List_Group" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="Test_formatGroup/String_Group" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="Test_formatGroup/Numeric_Group" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.000"></testcase>
+		<testcase name="TestProviderSuite" classname="github.com/oauth2-proxy/oauth2-proxy/v7/providers" time="0.760">
+			<system-out><![CDATA[Running Suite: Providers
+========================
+Random Seed: [1m1668561187[0m
+Will run [1m44[0m of [1m44[0m specs
+
+[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m[32m•[0m
+[1m[32mRan 44 of 44 Specs in 0.751 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m44 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m0 Skipped[0m]]></system-out>
+		</testcase>
+	</testsuite>
+</testsuites>

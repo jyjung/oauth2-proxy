@@ -1,5 +1,6 @@
 Dockerfile.dev
 Dockerfile
+Dockerfile.*
 docs
 vendor
 .git

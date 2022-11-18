@@ -42,6 +42,8 @@ _testmain.go
 # docker build -f Dockerfile.dev .
 Dockerfile.dev
 socamauthproxy
+socamauthproxy.cfg
+notyet
 # for private use
 security365_test*.go
 bin/
